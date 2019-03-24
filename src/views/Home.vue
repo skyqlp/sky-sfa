@@ -1,18 +1,36 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <HomeTabbar></HomeTabbar>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HomeTabbar from "../components/Tabbar";
 
 export default {
-  name: 'home',
+  name: "home",
+  data() {
+    return {
+      TabbarList: [
+        {
+          icon: '',
+          tabbarlabel:'首页'
+        }
+      ]
+    }
+  },
   components: {
-    HelloWorld
+    HomeTabbar
   }
-}
+};
 </script>
+
+<style lang="stylus" scoped>
+.home {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+</style>
+
